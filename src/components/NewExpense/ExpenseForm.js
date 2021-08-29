@@ -73,7 +73,7 @@ const ExpenseForm = (props) => {
       <div className='new-expense__controls'>
 
         <div className='new-expense__control'>
-          <label>Title</label>
+          <label>Název</label>
           <input 
             type='text' 
             value={enteredTitle} 
@@ -81,17 +81,17 @@ const ExpenseForm = (props) => {
         </div>
 
         <div className='new-expense__control'>
-          <label>Amount</label>
+          <label>Cena</label>
           <input 
             type='number' 
             value={enteredAmount} 
-            min='0.1' 
-            step='0.1' 
+            min='0.10' 
+            step='0.10' 
             onChange={amountChangeHandler} />
         </div>
 
         <div className='new-expense__control'>
-          <label>Date</label>
+          <label>Datum</label>
           <input 
             type='date' 
             value={enteredDate} 
@@ -102,7 +102,8 @@ const ExpenseForm = (props) => {
       </div>
 
       <div className='new-expense__actions'>
-        <button type='submit'>Add Expense</button>
+        <button type='button' onClick={props.onCancel}>Zrušit</button>
+        <button type='submit'>Přidat položku</button>
       </div>
 
     </form>
